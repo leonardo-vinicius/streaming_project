@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Serviço de Streaming baseado em Reuso de Softeware e metodologias ageis
 
-Things you may want to cover:
+Criados microserviços independentes de: Notificação, Autenticação, Registro de Mídia(Vídeo, conteúdo para o catálogo) e pagamento
 
-* Ruby version
+POST /authenticate
+POST /notifications
+POST /videos
+POST /subscriptions
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Presença também de CRUD de operações básicas para usuários, vídeos e pagamentos
