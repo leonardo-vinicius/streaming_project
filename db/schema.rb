@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_11_10_171840) do
+ActiveRecord::Schema.define(version: 2024_11_10_195036) do
 
   create_table "histories", force: :cascade do |t|
     t.integer "progress"
@@ -21,6 +21,15 @@ ActiveRecord::Schema.define(version: 2024_11_10_171840) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_histories_on_user_id"
     t.index ["video_id"], name: "index_histories_on_video_id"
+  end
+
+  create_table "notifications", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_notifications_on_user_id"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -71,6 +80,7 @@ ActiveRecord::Schema.define(version: 2024_11_10_171840) do
 
   add_foreign_key "histories", "users"
   add_foreign_key "histories", "videos"
+  add_foreign_key "notifications", "users"
   add_foreign_key "reviews", "users"
   add_foreign_key "reviews", "videos"
   add_foreign_key "subscriptions", "users"

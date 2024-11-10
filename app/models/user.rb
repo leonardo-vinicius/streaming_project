@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   has_one :subscription
   has_secure_password
+
+  has_many :notifications
         
   PASSWORD_FORMAT_ERROR_MESSAGE = 'password is invalid, it must contain at least one number'.freeze
 
