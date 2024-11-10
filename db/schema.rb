@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_11_10_195036) do
+ActiveRecord::Schema.define(version: 2024_11_10_203509) do
 
   create_table "histories", force: :cascade do |t|
     t.integer "progress"
@@ -73,7 +73,7 @@ ActiveRecord::Schema.define(version: 2024_11_10_195036) do
     t.integer "duration"
     t.string "url_video"
     t.string "url_image"
-    t.string "type"
+    t.string "video_type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -19,10 +19,11 @@ class VideosController < ApplicationController
 
   # POST /videos
   def create
-    @video = Video.new(video_params)
+    #@video = Video.new(video_params)
+    @video = VideoService.new(video_params).call
     
-    if @video.save
-      redirect_to @video, notice: 'Video was successfully created.'
+    if @video
+      render json: @video
     else
       render :new
     end
@@ -55,6 +56,6 @@ class VideosController < ApplicationController
 
     # Strong parameters for video creation and update
     def video_params
-      params.require(:video).permit(:title, :description, :url)
+      params.require(:video).permit(:title, :description, :url, :genre, :duration, :url_video, :url_image, :video_type, :release_date)
     end
 end

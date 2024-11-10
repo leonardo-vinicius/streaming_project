@@ -1,6 +1,6 @@
 class NotificationService
   def initialize(user, title, description)
-    @user = user
+    @user = User.find_by(id: user)
     @title = title
     @description = description
   end

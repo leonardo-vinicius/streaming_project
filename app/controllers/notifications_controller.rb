@@ -2,7 +2,7 @@ class NotificationsController < ApplicationController
   before_action :set_user
 
   def create
-    @notification = @user.notifications.new(notification_params)
+    @notification = NotificationService.new(notification_params[:user_id], notification_params[:title], notification_params[:description]).call
 
     if @notification.save
       render json: @notification, status: :created
@@ -18,6 +18,6 @@ class NotificationsController < ApplicationController
   end
 
   def notification_params
-    params.require(:notification).permit(:title, :description)
+    params.require(:notification).permit(:title, :description, :user_id)
   end
 end
