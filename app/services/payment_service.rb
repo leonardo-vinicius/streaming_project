@@ -9,7 +9,7 @@ class PaymentService
     if payment.save
       return payment
     else
-      raise "Erro ao criar video: #{video.errors.full_messages.join(', ')}"
+      raise "Erro ao criar pagamento: #{payment.errors.full_messages.join(', ')}"
     end
   end
 end
