@@ -12,7 +12,9 @@ POST /subscriptions
 Presença também de CRUD de operações básicas para usuários, vídeos e pagamentos
 
 <h2>Caminhos para os serviços:</h2>
-AUTENTICAÇÃO: app/services/authenticate/json_web_token.rb
-VÍDEO: app/services/video_service.rb
-PAGAMENTO: app/services/payment_service.rb
-NOTIFICAÇÃO; app/services/notification_service.rb
+<ul>
+  <li>AUTENTICAÇÃO: <a href="https://github.com/leonardo-vinicius/streaming_project/tree/master/app/services/authenticate/json_web_token.rb">app/services/authenticate/json_web_token.rb</a></li>
+  <li>VÍDEO: <a href="https://github.com/leonardo-vinicius/streaming_project/tree/master/app/services/video_service.rb">app/services/video_service.rb</a></li>
+  <li>PAGAMENTO: <a href="https://github.com/leonardo-vinicius/streaming_project/tree/master/app/services/payment_service.rb">app/services/payment_service.rb</a></li>
+  <li>NOTIFICAÇÃO: <a href="https://github.com/leonardo-vinicius/streaming_project/tree/master/app/services/notification_service.rb">app/services/notification_service.rb</a></li>
+</ul>
